@@ -1,42 +1,36 @@
 # System of linear equations to solve
 
-#### 1. Turns on red when yellow is on
+### Lights problem
 
-#### 2.Red and green are never on together
+#### Bhaskar Agarwal
 
-#### 3.Blue and green can only be on and off together
+The logic for the lights is the following
 
-#### 4.Blue and purple can not be off at the same time
+1. Turns on red when yellow is on
 
-#### 5.If purple is on, blue and yellow have to be on
+2.Red and green are never on together
+
+3.Blue and green can only be on and off together
+
+4.Blue and purple can not be off at the same time
+
+5.If purple is on, blue and yellow have to be on
 
 ### Equations
 
-Let 
+Let Y: Yellow , R: Red , G: Green , B: Blue , P: Purple. Assume a vlue of 1 as ON and 0 as OFF.
 
-Y: Yellow
+Therefore
 
-R: Red
+Y + R = 2 (cond. 1)
 
-G: Green
+R+G=1 (cond. 2)
 
-B: Blue
+B-G =0 (cond. 3)
 
-P: Purple
+B+P  > 0 translates to - B - P < 0 (cond. 4)
 
-
-
-Assume a vlue of 1 as ON and 0 as OFF.
-
-Y + R = 2
-
-R+G=1
-
-B-G =0
-
-B+P  > 0 translates to - B - P < 0
-
-P + B + Y = 3
+P + B + Y = 3 (cond. 5) THIS IS WRONG- NEEDS WORK
 
 ##### Looks like this will be a MILP, as all variables can only be 1 or 0.
 
