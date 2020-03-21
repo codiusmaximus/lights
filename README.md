@@ -1,5 +1,7 @@
 # Solving the lights game
 
+Ciao Bhaskar, I cannot run the jupyter notebook...
+
 This project aims at solving the carousel lights game (reference needed, Fede). The game is as follows.
 
 A person goes to a carousel operator at the fair. The carousel operator tells him that anyone who can guess what happens to the 5 lights when he turns on all 5 swtiches gets free rides for life. The 5 switches do the following:
