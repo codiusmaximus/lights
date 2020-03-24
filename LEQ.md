@@ -22,17 +22,22 @@ Let Y: Yellow , R: Red , G: Green , B: Blue , P: Purple. Assume a vlue of 1 as O
 
 Therefore
 
-$Y - R < 1$  (cond. 1)
+$Y - R \leq 0$  (cond. 1)
 
-$R+G<2$ (cond. 2)
+$R+G\leq1$ (cond. 2)
+
+$B-G=0$ (cond. 3)
+
+$-B-P\leq-1$ (cond. 4)
 
 $B-G =0$ (cond. 3)
 
-$B+P  > 0$ translates to $- B - P < 0$ (cond. 4)
+$- B - P \leq -1$ (cond. 4)
 
-$P -B - Y < 1$ (cond. 5 maybe this works)
+$P -B - Y \leq -1$ (cond. 5 maybe this works)
 
-$-Y-R-G-B-P < 0$ Additional condition meaning they all can not be off
+$-Y-R-G-B-P \leq -1$ 
+(Additional condition meaning they all can not be off)
 
 ##### Looks like this will be a MILP, as all variables can only be 1 or 0.
 
@@ -42,6 +47,7 @@ $$
 $$
 
 $$
-\left[\begin{matrix}0&1&1&0&0\\1&-1&0&0&0\\0&0&0&-1&-1\\-1&0&0&-1&1\end{matrix}\right]\left[\begin{matrix}Y\\R\\G\\B\\P\end{matrix}\right]<\left[\begin{matrix}2\\1\\0\\1\end{matrix}\right]
+\left[\begin{matrix}1&-1&0&0&0\\0&1&1&0&0\\0&0&0&-1&-1\\-1&0&0&-1&1\\-1&-1&-1&-1&-1\end{matrix}\right]\left[\begin{matrix}Y\\R\\G\\B\\P\end{matrix}\right]\leq\left[\begin{matrix}0\\1\\-1\\-1\\-1\end{matrix}\right]
 $$
 
+ 
